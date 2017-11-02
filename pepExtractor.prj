@@ -1,1 +1,4 @@
-work	"automata.vhd"
+work	"MUX4x4.vhd"
+work	"decod7s.vhd"
+work	"refresco.vhd"
+work	"visualizacion.vhd"

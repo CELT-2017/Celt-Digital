@@ -64,9 +64,17 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_reg_desp40_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_reg_desp40_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_reg_desp40_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_registro_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_registro_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_registro_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_registro_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_visualizacion_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testvisu_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testvisu_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="visualizacion.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="visualizacion.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="visualizacion.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="visualizacion_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -77,34 +85,33 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1509635737" xil_pn:in_ck="-5984826874462294040" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1509635737">
+    <transform xil_pn:end_ts="1509656287" xil_pn:in_ck="-6901936762235117894" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1509656287">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="AND_2.vhd"/>
       <outfile xil_pn:name="MUX4x4.vhd"/>
       <outfile xil_pn:name="automata.vhd"/>
       <outfile xil_pn:name="comparador.vhd"/>
       <outfile xil_pn:name="decod7s.vhd"/>
       <outfile xil_pn:name="gen_reloj.vhd"/>
+      <outfile xil_pn:name="principal.vhd"/>
       <outfile xil_pn:name="refresco.vhd"/>
       <outfile xil_pn:name="reg_desp.vhd"/>
       <outfile xil_pn:name="reg_desp40.vhd"/>
       <outfile xil_pn:name="registro.vhd"/>
       <outfile xil_pn:name="sumador40.vhd"/>
+      <outfile xil_pn:name="test_automata.vhd"/>
       <outfile xil_pn:name="test_reg_desp40.vhd"/>
+      <outfile xil_pn:name="test_registro.vhd"/>
       <outfile xil_pn:name="test_sumador40.vhd"/>
+      <outfile xil_pn:name="testvisu.vhd"/>
       <outfile xil_pn:name="visualizacion.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1508430351" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6214891792914645982" xil_pn:start_ts="1508430351">
+    <transform xil_pn:end_ts="1509656034" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7817676610471047580" xil_pn:start_ts="1509656034">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508430351" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6448124059098497372" xil_pn:start_ts="1508430351">
+    <transform xil_pn:end_ts="1509656034" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1879162211885060762" xil_pn:start_ts="1509656034">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -112,49 +119,46 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508431537" xil_pn:in_ck="485669015101200006" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508431537">
+    <transform xil_pn:end_ts="1509656287" xil_pn:in_ck="-6901936762235117894" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1509656287">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="AND_2.vhd"/>
+      <outfile xil_pn:name="MUX4x4.vhd"/>
+      <outfile xil_pn:name="automata.vhd"/>
       <outfile xil_pn:name="comparador.vhd"/>
+      <outfile xil_pn:name="decod7s.vhd"/>
       <outfile xil_pn:name="gen_reloj.vhd"/>
+      <outfile xil_pn:name="principal.vhd"/>
+      <outfile xil_pn:name="refresco.vhd"/>
+      <outfile xil_pn:name="reg_desp.vhd"/>
       <outfile xil_pn:name="reg_desp40.vhd"/>
       <outfile xil_pn:name="registro.vhd"/>
       <outfile xil_pn:name="sumador40.vhd"/>
+      <outfile xil_pn:name="test_automata.vhd"/>
       <outfile xil_pn:name="test_reg_desp40.vhd"/>
+      <outfile xil_pn:name="test_registro.vhd"/>
       <outfile xil_pn:name="test_sumador40.vhd"/>
+      <outfile xil_pn:name="testvisu.vhd"/>
+      <outfile xil_pn:name="visualizacion.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1508431551" xil_pn:in_ck="485669015101200006" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2460651107325524954" xil_pn:start_ts="1508431537">
+    <transform xil_pn:end_ts="1509656293" xil_pn:in_ck="-6901936762235117894" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5163009066094124630" xil_pn:start_ts="1509656287">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_reg_desp40_beh.prj"/>
-      <outfile xil_pn:name="test_reg_desp40_isim_beh.exe"/>
+      <outfile xil_pn:name="test_registro_beh.prj"/>
+      <outfile xil_pn:name="test_registro_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1508431552" xil_pn:in_ck="8708025035452836987" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5568359439073600531" xil_pn:start_ts="1508431551">
+    <transform xil_pn:end_ts="1509656295" xil_pn:in_ck="-2501645912881355693" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3534797285684972695" xil_pn:start_ts="1509656293">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_reg_desp40_isim_beh.wdb"/>
+      <outfile xil_pn:name="test_registro_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1509027460" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1509027458">
       <status xil_pn:value="SuccessfullyRun"/>

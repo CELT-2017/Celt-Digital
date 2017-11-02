@@ -1,0 +1,4 @@
+vhdl isim_temp "refresco.vhd"
+vhdl isim_temp "MUX4x4.vhd"
+vhdl isim_temp "decod7s.vhd"
+vhdl isim_temp "visualizacion.vhd"

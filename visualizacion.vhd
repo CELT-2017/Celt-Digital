@@ -42,10 +42,12 @@ entity visualizacion is
 end visualizacion;
 
 architecture a_visualizacion of visualizacion is
+
 signal Y_SAL  : STD_LOGIC_VECTOR (3 downto 0);
 signal S_ENT  : STD_LOGIC_VECTOR (1 downto 0);
 signal AN_SAL : STD_LOGIC_VECTOR (3 downto 0);
 signal S_SAL  : STD_LOGIC_VECTOR (6 downto 0);
+
 component MUX4x4
  Port ( E0 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 0
 		  E1 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 1
@@ -64,29 +66,29 @@ component refresco
  Port ( CLK : in STD_LOGIC; -- reloj
 			 S : out STD_LOGIC_VECTOR (1 downto 0); -- Control para el mux
 			AN : out STD_LOGIC_VECTOR (3 downto 0)); -- Control displays individuales
-end component;
+	end component;
 
 begin
 
-mux4 : MUX4x4 port map (
-E0=>E0,
-E1=>E1,
-E2=>E2,
-E3=>E3,
-S=>S_ENT,
-Y=>Y_SAL
-);
-res : refresco port map(
-CLK=>CLK,
-S=>S_ENT,
-AN=>AN_SAL
-);
-dec : decod7s port map(
-D=>Y_SAL,
-S=>S_SAL
-);
+	mux4 : MUX4x4 port map (
+									E0=>E0,
+									E1=>E1,
+									E2=>E2,
+									E3=>E3,
+									S=>S_ENT,
+									Y=>Y_SAL);
+	res : refresco port map(
+									CLK=>CLK,
+									S=>S_ENT,
+									AN=>AN_SAL
+									);
+	dec : decod7s port map(
+									D=>Y_SAL,
+									S=>S_SAL
+									);
 
-AN<=AN_SAL;
-SEG7<=S_SAL;
+	AN<=AN_SAL;
+	SEG7<=S_SAL;
+
 end a_visualizacion;
 

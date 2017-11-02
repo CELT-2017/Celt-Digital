@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Isabel/Desktop/Isabel/uni/tercero/CELT/digital/test_reg_desp40_isim_beh.exe" -prj "C:/Users/Isabel/Desktop/Isabel/uni/tercero/CELT/digital/test_reg_desp40_beh.prj" "work.test_reg_desp40" 
+-intstyle "ise" -incremental -o "C:/Users/jcala/Documents/Celt-Digital/test_registro_isim_beh.exe" -prj "C:/Users/jcala/Documents/Celt-Digital/test_registro_beh.prj" "work.test_registro" 

@@ -40,18 +40,21 @@ end registro;
 
 architecture a_registro of registro is
 
+signal cache : STD_LOGIC_VECTOR (13 downto 0) := (others => '0');
+
 begin
 
 process(clk)
 	begin
-	
 		if (CLK'event and CLK ='1') then
 			if (EN = '1') then
-				SALIDA<= ENTRADA;
+				cache<= ENTRADA;
 			end if;
 		end if;
 		
 	end process;
+	
+	SALIDA <= cache;
 
 end a_registro;
 
