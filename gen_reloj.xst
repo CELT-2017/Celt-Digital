@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Isabel/Desktop/Isabel/uni/tercero/CELT/digital/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Isabel/Desktop/Isabel/uni/tercero/CELT/digital/xst"
+elaborate
+-ifn gen_reloj.prj
+-ifmt mixed
