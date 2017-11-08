@@ -19,8 +19,6 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -42,18 +40,21 @@ architecture a_refresco of refresco is
 signal SS : STD_LOGIC_VECTOR(1 downto 0) := (others => '0');
 
 begin
+
 process(CLK)
 	begin
+	
 	if(CLK'event and CLK='1') then
 		SS <= SS+1;
+	
 	end if;
 end process;
 
 S<=SS;
+
 AN<="0111" when SS="00" else   -- activa cada display en function del valor de SS
     "1011" when SS="01" else
     "1101" when SS="10" else
     "1110" when SS="11";
-
 end a_refresco;
 

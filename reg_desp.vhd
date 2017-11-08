@@ -48,8 +48,8 @@ begin
     begin
       if (CLK'event and CLK='1') then
 			if(EN = '1') then
-				QS(13 downto 1) <= QS(12 downto 0);
-				QS(0)<=SIN;
+				QSAL(13 downto 1) <= QSAL(12 downto 0);
+				QSAL(0)<=SIN;
 			end if;
 		end if;
   end process;
