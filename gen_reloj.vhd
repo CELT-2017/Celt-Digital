@@ -47,7 +47,7 @@ begin
 		begin
 			if CLK'event and CLK='1' then
 				cont_M <= cont_M + 1;
-				if cont_M >= "100110001001011010000" then -- división de frecuencia a 40 Hz el número de ciclos es 1250000
+				if cont_M >= "10011000100101101000" then -- división de frecuencia a 40 Hz el número de ciclos es 1250000/2=625000
 					S_M <=not S_M;
 					cont_M <=(others=>'0');
 				end if;

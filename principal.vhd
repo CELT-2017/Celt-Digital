@@ -173,10 +173,10 @@ REGV : registro port map(
 );
 
 VIS  : visualizacion port map(
-						E0 => SAL_REG(3 downto 0),
-						E1 => SAL_REG(7 downto 4),
-						E2 => SAL_REG(12 downto 8),
-						E3 => "00" & SAL_REG(14 downto 13),
+						E0 => '0' & SAL_REG(13 downto 11),
+						E1 => SAL_REG(10 downto 7),
+						E2 => '0' & SAL_REG(6 downto 4),
+						E3 => SAL_REG(3 downto 0),
 						CLK => CLK,
 						SEG7 => SEG7,
 						AN => AN
