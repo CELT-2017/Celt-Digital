@@ -19,6 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -38,15 +40,23 @@ end refresco;
 architecture a_refresco of refresco is
 
 signal SS : STD_LOGIC_VECTOR(1 downto 0) := (others => '0');
-
+signal counter : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
 begin
 
 process(CLK)
 	begin
 	
 	if(CLK'event and CLK='1') then
-		SS <= SS+1;
-	
+		if counter = 100000 then
+			if SS = "11" then
+				SS <= "00";
+			else
+				SS <= SS+1;
+			end if;
+			counter <= (others => '0');
+		else
+			counter <= counter + 1;
+		end if;
 	end if;
 end process;
 

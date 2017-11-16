@@ -30,10 +30,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity MUX4x4 is
- Port ( E0 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 0
-		  E1 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 1
-		  E2 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 2
-		  E3 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 3
+ Port ( E0 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 0 DECENAS MIN
+		  E1 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 1 UNIDADES MIN
+		  E2 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 2 SEG 
+		  E3 : in STD_LOGIC_VECTOR (3 downto 0); -- Entrada 3 SEG
 		  S : in STD_LOGIC_VECTOR (1 downto 0); -- Señal de control
 		  Y : out STD_LOGIC_VECTOR (3 downto 0)); -- Salida
 end MUX4x4;

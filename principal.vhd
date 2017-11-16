@@ -49,10 +49,12 @@ signal CAPTUR_SAL : STD_LOGIC;
 signal VALID_SAL : STD_LOGIC;
 signal Q2_SAL : STD_LOGIC_VECTOR (13 downto 0);
 signal SAL_REG : STD_LOGIC_VECTOR (13 downto 0);
+signal E0_TMP : STD_LOGIC_VECTOR(3 downto 0) := (others => '0');
+signal E2_TMP : STD_LOGIC_VECTOR(3 downto 0) := (others => '0');
 
 component gen_reloj
 	Port ( CLK : in STD_LOGIC; -- Reloj de la FPGA
-			 CLK_OUT : out STD_LOGIC); -- Reloj de frecuencia dividida
+			 CLK_M : out STD_LOGIC); -- Reloj de frecuencia dividida
 	end component;
 
 component reg_desp40
@@ -90,7 +92,7 @@ component registro
 	Port ( ENTRADA : in STD_LOGIC_VECTOR (13 downto 0);
 			 SALIDA : out STD_LOGIC_VECTOR (13 downto 0);
 			 EN : in STD_LOGIC; -- Enable
-			 RCLK : in STD_LOGIC);
+			 CLK : in STD_LOGIC);
 	end component;
 
 component automata
@@ -115,7 +117,7 @@ component visualizacion
 begin
 GEN  : gen_reloj port map(
 						CLK => CLK,
-						CLK_OUT => CLK_M
+						CLK_M => CLK_M
 );
 
 REG40: reg_desp40 port map(
@@ -169,17 +171,20 @@ REGV : registro port map(
 						ENTRADA => Q2_SAL,
 						SALIDA => SAL_REG,
 						EN => VALID_SAL,
-						RCLK => CLK_M
+						CLK => CLK_M
 );
 
 VIS  : visualizacion port map(
-						E0 => '0' & SAL_REG(13 downto 11),
+						E0 => E0_TMP,
 						E1 => SAL_REG(10 downto 7),
-						E2 => '0' & SAL_REG(6 downto 4),
+						E2 => E2_TMP,
 						E3 => SAL_REG(3 downto 0),
 						CLK => CLK,
 						SEG7 => SEG7,
 						AN => AN
 );
+
+E0_TMP <= '0' & SAL_REG(13 downto 11);
+E2_TMP <= '0' & SAL_REG(6 downto 4);
 
 end a_principal;

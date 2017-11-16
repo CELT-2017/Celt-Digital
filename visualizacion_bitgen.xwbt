@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\alumno\celt_f\visualizacion.ncd
+OUTFILE=C:\Users\alumno\celt_f\visualizacion.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=C:\Users\alumno\celt_f
+LICENSE=WebPack
+USER_INFO=210772323_0_0_114
