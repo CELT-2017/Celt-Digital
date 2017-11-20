@@ -173,7 +173,7 @@ LAB8:    xsi_set_current_line(101, ng0);
     memcpy(t10, t2, 4U);
     xsi_driver_first_trans_fast(t6);
     xsi_set_current_line(105, ng0);
-    t3 = (3 * 1000000000LL);
+    t3 = (8 * 1000000000LL);
     t2 = (t0 + 3328);
     xsi_process_wait(t2, t3);
 
@@ -194,7 +194,7 @@ LAB12:    xsi_set_current_line(106, ng0);
     memcpy(t10, t2, 4U);
     xsi_driver_first_trans_fast(t6);
     xsi_set_current_line(107, ng0);
-    t3 = (1000 * 1000000000LL);
+    t3 = (16 * 1000000000LL);
     t2 = (t0 + 3328);
     xsi_process_wait(t2, t3);
 

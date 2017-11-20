@@ -102,9 +102,9 @@ BEGIN
 			E1 <= "0010";
 			E2 <= "0100";
 			E3 <= "1000";
-			wait for 3 ms;
+			wait for 8 ms;
 			E0 <= "1111";
-			wait for 1000 ms; -- Overkill
+			wait for 16 ms; 
 			E0 <= "0011";
 			E1 <= "0110";
 			E2 <= "1100";

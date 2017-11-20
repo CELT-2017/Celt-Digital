@@ -22,5 +22,5 @@ Compiling architecture behavior of entity testvisu
 Time Resolution for simulation is 1ps.
 Compiled 13 VHDL Units
 Built simulation executable C:/Users/jcala/Documents/Celt-Digital/testvisu_isim_beh.exe
-Fuse Memory Usage: 33688 KB
-Fuse CPU Usage: 593 ms
+Fuse Memory Usage: 34324 KB
+Fuse CPU Usage: 781 ms
