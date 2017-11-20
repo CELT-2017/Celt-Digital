@@ -42,10 +42,10 @@ architecture a_MUX4x4 of MUX4x4 is
 
 begin
 
-Y <= E3 when S="00" else  -- se selecciona la salida en función de las entradas
-     E2 when S="01" else  -- de control
-     E1 when S="10" else
-     E0 when S="11";
+Y <= E0 when S="00" else  -- se selecciona la salida en función de las entradas
+     E1 when S="01" else  -- de control
+     E2 when S="10" else
+     E3 when S="11";
 
 end a_MUX4x4;
 
