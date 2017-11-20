@@ -1,20 +1,26 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/jcala/Documents/Celt-Digital/test_registro_isim_beh.exe -prj C:/Users/jcala/Documents/Celt-Digital/test_registro_beh.prj work.test_registro 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/jcala/Documents/Celt-Digital/testvisu_isim_beh.exe" -prj "C:/Users/jcala/Documents/Celt-Digital/testvisu_beh.prj" "work.testvisu" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/jcala/Documents/Celt-Digital/registro.vhd" into library work
-Parsing VHDL file "C:/Users/jcala/Documents/Celt-Digital/test_registro.vhd" into library work
+Parsing VHDL file "C:/Users/jcala/Documents/Celt-Digital/refresco.vhd" into library work
+Parsing VHDL file "C:/Users/jcala/Documents/Celt-Digital/MUX4x4.vhd" into library work
+Parsing VHDL file "C:/Users/jcala/Documents/Celt-Digital/decod7s.vhd" into library work
+Parsing VHDL file "C:/Users/jcala/Documents/Celt-Digital/visualizacion.vhd" into library work
+Parsing VHDL file "C:/Users/jcala/Documents/Celt-Digital/testvisu.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
-Compiling architecture a_registro of entity registro [registro_default]
-Compiling architecture behavior of entity test_registro
+Compiling architecture a_mux4x4 of entity MUX4x4 [mux4x4_default]
+Compiling architecture a_refresco of entity refresco [refresco_default]
+Compiling architecture a_decod7s of entity decod7s [decod7s_default]
+Compiling architecture a_visualizacion of entity visualizacion [visualizacion_default]
+Compiling architecture behavior of entity testvisu
 Time Resolution for simulation is 1ps.
-Compiled 7 VHDL Units
-Built simulation executable C:/Users/jcala/Documents/Celt-Digital/test_registro_isim_beh.exe
-Fuse Memory Usage: 34240 KB
-Fuse CPU Usage: 499 ms
+Compiled 13 VHDL Units
+Built simulation executable C:/Users/jcala/Documents/Celt-Digital/testvisu_isim_beh.exe
+Fuse Memory Usage: 33688 KB
+Fuse CPU Usage: 593 ms

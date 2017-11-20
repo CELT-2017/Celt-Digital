@@ -40,7 +40,7 @@ end refresco;
 architecture a_refresco of refresco is
 
 signal SS : STD_LOGIC_VECTOR(1 downto 0) := (others => '0');
-signal counter : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
+signal counter : STD_LOGIC_VECTOR(20 downto 0) := (others => '0');
 begin
 
 process(CLK)

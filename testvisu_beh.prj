@@ -1,0 +1,5 @@
+vhdl work "refresco.vhd"
+vhdl work "MUX4x4.vhd"
+vhdl work "decod7s.vhd"
+vhdl work "visualizacion.vhd"
+vhdl work "testvisu.vhd"
