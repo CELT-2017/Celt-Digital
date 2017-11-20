@@ -62,9 +62,9 @@ end process;
 
 S<=SS;
 
-AN<="0111" when SS="00" else   -- activa cada display en function del valor de SS
-    "1011" when SS="01" else
-    "1101" when SS="10" else
-    "1110" when SS="11";
+AN<="1110" when SS="00" else   -- activa cada display en function del valor de SS
+    "1101" when SS="01" else
+    "1011" when SS="10" else
+    "0111" when SS="11";
 end a_refresco;
 

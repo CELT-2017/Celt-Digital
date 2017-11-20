@@ -70,13 +70,13 @@
          <ClosedNode>/test_visualizacion - behavior C:|Users|jcala|Documents|Celt-Digital|test_visualizacion.vhd/uut - visualizacion - a_visualizacion</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>mux4 - MUX4x4 - a_MUX4x4 (C:/Users/jcala/Documents/Celt-Digital/MUX4x4.vhd)</SelectedItem>
+         <SelectedItem>testvisu - behavior (C:/Users/jcala/Documents/Celt-Digital/testvisu.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000017e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000017e0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>mux4 - MUX4x4 - a_MUX4x4 (C:/Users/jcala/Documents/Celt-Digital/MUX4x4.vhd)</CurrentItem>
+      <CurrentItem>testvisu - behavior (C:/Users/jcala/Documents/Celt-Digital/testvisu.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -97,13 +97,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001900000009901000000050100000002</SourceProcessView>
    <CurrentView>Behavioral Simulation</CurrentView>
