@@ -43,46 +43,43 @@ end automata;
 architecture a_automata of automata is
 type TIPO_ESTADO is (ESP_SYNC,AVAN_ZM,MUESTREO,DATO0,DATO1,DATOSYNC);
 signal ST : TIPO_ESTADO:= ESP_SYNC ; -- Estado inicial en que arranca
-signal salidas  : STD_LOGIC_VECTOR (2 downto 0) :="000";
-signal estado_actual : TIPO_ESTADO := ESP_SYNC;
-signal estado_siguiente : TIPO_ESTADO := ESP_SYNC;
-signal cuenta : STD_LOGIC_VECTOR (7 downto 0) := (Others => '0');
-signal cambiando_estado : STD_LOGIC := '0';
+signal salidas : STD_LOGIC_VECTOR (2 downto 0) :="000";
 
 begin
-
  process (CLK)
+ variable cont : STD_LOGIC_VECTOR (7 downto 0):="00000000"; -- contador
+									-- para contar ciclos en un estado, iniciado a 0
 	begin
 		if (CLK'event and CLK = '1') then
 			case ST is
-				when ESP_SYNC =>
+				when ESP_SYNC => -- Estado normal, dura 1 ciclo de reloj
 					if C0 = '0' and C1 = '0' then
 						ST <= AVAN_ZM;
 					else
 						ST <= ESP_SYNC;
 					end if;
-				when AVAN_ZM =>
-					if cuenta = 20 then
-						ST <= MUESTREO;
-						cuenta <= (others => '0');
+				when AVAN_ZM => -- Estado que dura 20 ciclos de reloj
+					cont:= cont+1; -- Se incrementa el contador.
+					if (cont=20) then -- Si llega a 20
+						cont:=(others=>'0'); -- Poner el contador a 0
+						ST<=MUESTREO; -- Y cambiar de estado
 					else
-						ST <= AVAN_ZM;
-						cuenta <= cuenta + 1;
-					end if;
+						ST<=AVAN_ZM; -- Si no ha llegado a 20 permanecer
+					end if; -- en el mismo estado
 				when MUESTREO =>
-					if cuenta = 39 then
-						if (C0 = '0') and (C1 = '1') then
-							ST <= DATO1;
+					cont:= cont+1;
+					if (cont = 39) then
+						if (C0 = '0') and (C1 = '0') then
+							ST <= DATOSYNC;
 						elsif C0 = '1' and C1 = '0' then
 							ST <= DATO0;
-						elsif C0 = '0' and C1 = '0' then
-							ST <= DATOSYNC;
+						elsif C0 = '0' and C1 = '1' then
+							ST <= DATO1;
 						else
 							ST <= MUESTREO;
 						end if;
 						cuenta <= (others => '0');
 					else
-						cuenta <= cuenta + 1;
 						ST <= MUESTREO;
 					end if;
 				when DATO0 =>
@@ -90,41 +87,23 @@ begin
 				when DATO1 =>
 					ST <= MUESTREO;
 				when DATOSYNC =>
-					ST <= MUESTREO;
+					ST <= MUESTREO;	
 			end case;
 		end if;
 	end process;
+ 
+ with ST select
+				salidas<=
+								"000" when ESP_SYNC,
+								"000" when AVAN_ZM,
+								"000" when MUESTREO,
+								"010" when DATO0,
+								"110" when DATO1,
+								"001" when DATOSYNC,
+								"000" when others;
 
---Output Logic
-process(ST)
-	begin
-			case ST is
-			when ESP_SYNC =>
-				DATO <= '0';
-				CAPTUR <= '0';
-				VALID <= '0';
-			when AVAN_ZM =>
-				DATO <= '0';
-				CAPTUR <= '0';
-				VALID <= '0';
-			when MUESTREO =>
-				DATO <= '0';
-				CAPTUR <= '0';
-				VALID <= '0';
-			when DATO0 =>
-				DATO <= '0';
-				CAPTUR <= '1';
-				VALID <= '0';
-		   when DATO1 =>
-				DATO <= '1';
-				CAPTUR <= '1';
-				VALID <= '0';
-			when DATOSYNC =>	
-				DATO <= '0';
-				CAPTUR <= '0';
-				VALID <= '1';
-		end case; 
-end process;
-
+DATO <= salidas(2);
+CAPTUR <= salidas(1);
+VALID <= salidas(0);
 end a_automata;
 
