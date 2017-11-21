@@ -78,7 +78,7 @@ begin
 						else
 							ST <= MUESTREO;
 						end if;
-						cuenta <= (others => '0');
+						cont:=(others=>'0');
 					else
 						ST <= MUESTREO;
 					end if;
