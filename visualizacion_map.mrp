@@ -9,25 +9,33 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 16 18:54:22 2017
+Mapped Date    : Thu Nov 23 11:43:06 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    5
+Number of warnings:    4
 Logic Utilization:
-  Number of 4 input LUTs:                 7 out of   1,920    1%
+  Number of Slice Flip Flops:            18 out of   1,920    1%
+  Number of 4 input LUTs:                14 out of   1,920    1%
 Logic Distribution:
-  Number of occupied Slices:              4 out of     960    1%
-    Number of Slices containing only related logic:       4 out of       4 100%
-    Number of Slices containing unrelated logic:          0 out of       4   0%
+  Number of occupied Slices:             16 out of     960    1%
+    Number of Slices containing only related logic:      16 out of      16 100%
+    Number of Slices containing unrelated logic:          0 out of      16   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:           7 out of   1,920    1%
-  Number of bonded IOBs:                 20 out of      83   24%
+  Total Number of 4 input LUTs:          29 out of   1,920    1%
+    Number used as logic:                14
+    Number used as a route-thru:         15
 
-Average Fanout of Non-Clock Nets:                2.19
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
 
-Peak Memory Usage:  260 MB
+  Number of bonded IOBs:                 16 out of      83   19%
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Average Fanout of Non-Clock Nets:                2.22
+
+Peak Memory Usage:  264 MB
 Total REAL time to MAP completion:  0 secs 
 Total CPU time to MAP completion:   0 secs 
 
@@ -78,13 +86,11 @@ WARNING:PhysDesignRules:367 - The signal <E0<2>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <E0<3>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <CLK_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network E1<3> has no load.
-INFO:LIT:395 - The above info message is repeated 12 more times for the
+INFO:LIT:395 - The above info message is repeated 15 more times for the
    following (max. 5 shown):
    E1<2>,
    E1<1>,
@@ -109,6 +115,9 @@ TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
 
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
 Section 6 - IOB Properties
 --------------------------
 
@@ -125,10 +134,6 @@ Section 6 - IOB Properties
 | E0<1>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | E0<2>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | E0<3>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| E3<0>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| E3<1>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| E3<2>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| E3<3>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | SEG7<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | SEG7<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | SEG7<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |

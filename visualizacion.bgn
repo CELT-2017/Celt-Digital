@@ -6,7 +6,7 @@ C:\Xilinx\14.7\ISE_DS\ISE\.
 -5
 Opened constraints file visualizacion.pcf.
 
-Thu Nov 16 18:54:32 2017
+Thu Nov 23 11:43:18 2017
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No visualizacion.ncd 
 
@@ -99,9 +99,7 @@ WARNING:PhysDesignRules:367 - The signal <E0<2>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <E0<3>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <CLK_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-DRC detected 0 errors and 5 warnings.  Please see the previously displayed
+DRC detected 0 errors and 4 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "visualizacion.bit".

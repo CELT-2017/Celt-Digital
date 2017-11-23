@@ -36,3 +36,30 @@ map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o visuali
 par -w -intstyle ise -ol high -t 1 visualizacion_map.ncd visualizacion.ncd visualizacion.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml visualizacion.twx visualizacion.ncd -o visualizacion.twr visualizacion.pcf -ucf visu_asoci.ucf 
 bitgen -intstyle ise -f visualizacion.ut visualizacion.ncd 
+xst -intstyle ise -ifn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.xst" -ofn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc visu_asoci.ucf -p xc3s100e-vq100-5 visualizacion.ngc visualizacion.ngd  
+map -intstyle ise -p xc3s100e-vq100-5 -cm area -ir off -pr off -c 100 -o visualizacion_map.ncd visualizacion.ngd visualizacion.pcf 
+xst -intstyle ise -ifn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.xst" -ofn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc visu_asoci.ucf -p xc3s100e-cp132-5 visualizacion.ngc visualizacion.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o visualizacion_map.ncd visualizacion.ngd visualizacion.pcf 
+par -w -intstyle ise -ol high -t 1 visualizacion_map.ncd visualizacion.ncd visualizacion.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml visualizacion.twx visualizacion.ncd -o visualizacion.twr visualizacion.pcf -ucf visu_asoci.ucf 
+bitgen -intstyle ise -f visualizacion.ut visualizacion.ncd 
+xst -intstyle ise -ifn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.xst" -ofn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc visu_asoci.ucf -p xc3s100e-cp132-5 visualizacion.ngc visualizacion.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o visualizacion_map.ncd visualizacion.ngd visualizacion.pcf 
+par -w -intstyle ise -ol high -t 1 visualizacion_map.ncd visualizacion.ncd visualizacion.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml visualizacion.twx visualizacion.ncd -o visualizacion.twr visualizacion.pcf -ucf visu_asoci.ucf 
+bitgen -intstyle ise -f visualizacion.ut visualizacion.ncd 
+xst -intstyle ise -ifn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.xst" -ofn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc visu_asoci.ucf -p xc3s100e-cp132-5 visualizacion.ngc visualizacion.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o visualizacion_map.ncd visualizacion.ngd visualizacion.pcf 
+par -w -intstyle ise -ol high -t 1 visualizacion_map.ncd visualizacion.ncd visualizacion.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml visualizacion.twx visualizacion.ncd -o visualizacion.twr visualizacion.pcf -ucf visu_asoci.ucf 
+bitgen -intstyle ise -f visualizacion.ut visualizacion.ncd 
+xst -intstyle ise -ifn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.xst" -ofn "C:/Users/alumno/Desktop/Celt-Digital-master/visualizacion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc visu_asoci.ucf -p xc3s100e-cp132-5 visualizacion.ngc visualizacion.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o visualizacion_map.ncd visualizacion.ngd visualizacion.pcf 
+par -w -intstyle ise -ol high -t 1 visualizacion_map.ncd visualizacion.ncd visualizacion.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml visualizacion.twx visualizacion.ncd -o visualizacion.twr visualizacion.pcf -ucf visu_asoci.ucf 
+bitgen -intstyle ise -f visualizacion.ut visualizacion.ncd 
